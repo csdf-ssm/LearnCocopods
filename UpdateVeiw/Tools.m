@@ -12,6 +12,12 @@
 @implementation Tools
 
 #define IOS7   [[UIDevice currentDevice]systemVersion].floatValue>=7.0
+#define SCREENSIZEWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENSIZEHIGHT [UIScreen mainScreen].bounds.size.height
+#define iPhone6PHIGHT 736
+#define iPhone6Hight 667
+#define iPhone5Hight 568
+#define iPhone4Hight 480
 
 +(UILabel*)createLabelWithFrame:(CGRect)frame Font:(int)font Text:(NSString*)text
 {
