@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
-
+#import <UIKit/UIKit.h>
 typedef void (^Success)(id responseObject);     // 成功Block
 typedef void (^Failure)(NSError *error,NSDictionary*errDic);        // 失败Block
 

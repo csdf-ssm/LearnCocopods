@@ -9,6 +9,7 @@
 #import "NetWorkRequest.h"
 //#import "AppDelegate.h"
 //#import "JHBaseNavController.h"
+#import <AFNetworking.h>
 #import "Tools.h"
 #define kBaseUrl @"空地址"
 #define kSafeUploadList @"一个文件地址"
