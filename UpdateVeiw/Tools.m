@@ -408,9 +408,9 @@ NSArray* safeArray(NSArray* array){
 /**
  *  验证银行卡号是否正确
  *
- *  @param bankCountCarNo <#bankCountCarNo description#>
+ *  @param cardNo cardNo
  *
- *  @return <#return value description#>
+ *  @return value
  */
 + (BOOL) isBlankCountCardNo:(NSString *)cardNo{
 

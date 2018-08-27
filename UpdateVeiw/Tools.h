@@ -89,17 +89,17 @@ NSArray* safeArray(NSArray*);
 /**
  *  验证银行卡号是否正确
  *
- *  @param bankCountCarNo <#bankCountCarNo description#>
+ *  @param cardNo
  *
- *  @return <#return value description#>
+ *  @return bool value
  */
 + (BOOL) isBlankCountCardNo:(NSString *)cardNo;
 /**
  *  简单验证是否为16活着19位数字
  *
- *  @param NSInteger <#NSInteger description#>
+ *  @param cardNo
  *
- *  @return <#return value description#>
+ *  @return boolvalue
  */
 + (BOOL) isCardNoCount:(NSString *)cardNo;
 
@@ -132,9 +132,9 @@ NSArray* safeArray(NSArray*);
 /**
  *  判断是否是数字
  *
- *  @param string <#string description#>
+ *  @param string
  *
- *  @return <#return value description#>
+ *  @return value
  */
 +(BOOL)isNumCharacters:(NSString *)string;
 /**
