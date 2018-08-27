@@ -57,7 +57,6 @@
 //NSString* safeString(id str);
 //根据日期获得星期几
 +(NSString *)countWeekDay:(NSDate *)date;
-+(void)AlterViewWithMessage:(NSString*)message WithBaseView:(UIView *)view;
 + (void)setExtraCellLineHidden: (UITableView *)tableView;
 //判断字符串是否为空
 + (BOOL)isBlankString:(NSString *)string;
@@ -89,7 +88,7 @@ NSArray* safeArray(NSArray*);
 /**
  *  验证银行卡号是否正确
  *
- *  @param cardNo
+ *  @param cardNo 卡号
  *
  *  @return bool value
  */
@@ -97,7 +96,7 @@ NSArray* safeArray(NSArray*);
 /**
  *  简单验证是否为16活着19位数字
  *
- *  @param cardNo
+ *  @param cardNo 卡号
  *
  *  @return boolvalue
  */
@@ -132,7 +131,7 @@ NSArray* safeArray(NSArray*);
 /**
  *  判断是否是数字
  *
- *  @param string
+ *  @param string 字符串
  *
  *  @return value
  */

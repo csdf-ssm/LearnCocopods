@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A1A3C2133CDB100D07238 /* PicUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A1A382133CDB000D07238 /* PicUpload.m */; };
+		180A1A3D2133CDB100D07238 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A1A3A2133CDB000D07238 /* Tools.m */; };
 		18931FA2212E8AA9004EC18E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18931FA1212E8AA9004EC18E /* AppDelegate.m */; };
 		18931FA5212E8AA9004EC18E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18931FA4212E8AA9004EC18E /* ViewController.m */; };
 		18931FA8212E8AA9004EC18E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18931FA6212E8AA9004EC18E /* Main.storyboard */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180A1A372133CDB000D07238 /* PicUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicUpload.h; sourceTree = "<group>"; };
+		180A1A382133CDB000D07238 /* PicUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicUpload.m; sourceTree = "<group>"; };
+		180A1A392133CDB000D07238 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		180A1A3A2133CDB000D07238 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		18931F9D212E8AA9004EC18E /* CocopodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocopodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18931FA0212E8AA9004EC18E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18931FA1212E8AA9004EC18E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180A1A342133CDB000D07238 /* UpdateVeiw */ = {
+			isa = PBXGroup;
+			children = (
+				180A1A372133CDB000D07238 /* PicUpload.h */,
+				180A1A382133CDB000D07238 /* PicUpload.m */,
+				180A1A392133CDB000D07238 /* Tools.h */,
+				180A1A3A2133CDB000D07238 /* Tools.m */,
+			);
+			name = UpdateVeiw;
+			path = ../../UpdateVeiw;
+			sourceTree = "<group>";
+		};
 		18931F94212E8AA9004EC18E = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +119,7 @@
 		18931F9F212E8AA9004EC18E /* CocopodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				180A1A342133CDB000D07238 /* UpdateVeiw */,
 				18931FA0212E8AA9004EC18E /* AppDelegate.h */,
 				18931FA1212E8AA9004EC18E /* AppDelegate.m */,
 				18931FA3212E8AA9004EC18E /* ViewController.h */,
@@ -262,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180A1A3C2133CDB100D07238 /* PicUpload.m in Sources */,
 				18931FA5212E8AA9004EC18E /* ViewController.m in Sources */,
+				180A1A3D2133CDB100D07238 /* Tools.m in Sources */,
 				18931FB0212E8AB0004EC18E /* main.m in Sources */,
 				18931FA2212E8AA9004EC18E /* AppDelegate.m in Sources */,
 			);

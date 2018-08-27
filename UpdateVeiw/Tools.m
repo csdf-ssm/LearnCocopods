@@ -7,7 +7,6 @@
 //
 
 #import "Tools.h"
-#import "AppDelegate.h"
 #import <objc/runtime.h>  
 @implementation Tools
 
@@ -263,30 +262,30 @@
     [tableView setTableFooterView:view];
 }
 
-
-+(void)AlterViewWithMessage:(NSString *)message WithBaseView:(UIView *)view{
-    CGFloat labelW = [message boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 30) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.width;
-    UILabel *m=(UILabel *)[view viewWithTag:2000];
-    [[self class] cancelPreviousPerformRequestsWithTarget:self];
-
-//    [m removeFromSuperview];
-//     m=nil;
-    if(m==nil)
-    {
-     m=[Tools createLabelWithFrame:CGRectMake(0, 0, labelW+50,30) Font:15 Text:message];
-    m.textAlignment=NSTextAlignmentCenter;
-    m.backgroundColor=[UIColor blackColor];
-    m.alpha=0.7;
-    [m setTextColor:[UIColor whiteColor]];
-    m.tag=2000;
-    ViewBorderRadius(m, 4, 0, [UIColor whiteColor]);
-    [view addSubview:m];
-    [view bringSubviewToFront:m];
-    m.center=view.center;
-    }
-    m.text=message;
-    [self performSelector:@selector(HideAlterViewWithView:) withObject:view afterDelay:2];
-}
+//
+//+(void)AlterViewWithMessage:(NSString *)message WithBaseView:(UIView *)view{
+//    CGFloat labelW = [message boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 30) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.width;
+//    UILabel *m=(UILabel *)[view viewWithTag:2000];
+//    [[self class] cancelPreviousPerformRequestsWithTarget:self];
+//
+////    [m removeFromSuperview];
+////     m=nil;
+//    if(m==nil)
+//    {
+//     m=[Tools createLabelWithFrame:CGRectMake(0, 0, labelW+50,30) Font:15 Text:message];
+//    m.textAlignment=NSTextAlignmentCenter;
+//    m.backgroundColor=[UIColor blackColor];
+//    m.alpha=0.7;
+//    [m setTextColor:[UIColor whiteColor]];
+//    m.tag=2000;
+//    ViewBorderRadius(m, 4, 0, [UIColor whiteColor]);
+//    [view addSubview:m];
+//    [view bringSubviewToFront:m];
+//    m.center=view.center;
+//    }
+//    m.text=message;
+//    [self performSelector:@selector(HideAlterViewWithView:) withObject:view afterDelay:2];
+//}
 +(void)HideAlterViewWithView:(UIView *)view{
 
         UILabel *l=(UILabel *)[view viewWithTag:2000];
@@ -349,7 +348,6 @@ NSArray* safeArray(NSArray* array){
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateFormat:formate];
     NSString *timeStamp=date;
-    HHLog(@"%zd",[timeStamp integerValue]);
     long long int date1=(long long int)([timeStamp integerValue]/1000);
     NSDate *confromTimesp=[NSDate dateWithTimeIntervalSince1970:date1];
     return  [formatter stringFromDate:confromTimesp];
@@ -368,7 +366,6 @@ NSArray* safeArray(NSArray* array){
     NSDate *date=[dateFormatter dateFromString:time];
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[date timeIntervalSince1970]];
     NSString *realTime=[NSString stringWithFormat:@"%zd",[timeSp integerValue]*1000];
-    HHLog(@"realTime=%@",realTime);
     return realTime ;
 }
 
@@ -377,7 +374,6 @@ NSArray* safeArray(NSArray* array){
 +(NSDictionary *)safeDiction:(NSDictionary*)keyedValues{
     NSMutableDictionary *dic=[NSMutableDictionary dictionaryWithDictionary:keyedValues];
     for(id key in [dic allKeys]){
-        HHLog(@"%@",key);
         id value=[dic valueForKey:key];
         if([value isEqual:[NSNull null]])
         {
@@ -631,7 +627,6 @@ NSArray* safeArray(NSArray* array){
 +(BOOL)returnTimeFromDate:(NSString *)startTime WithEndTime:(NSString *)endTime WithFormatter:(NSString *)formate{
     NSDate *StartDate=[Tools changeDateWithDateStr:startTime WithFormate:formate];
     NSDate *EndDate=[Tools changeDateWithDateStr:endTime WithFormate:formate];
-    HHLog(@"startTime=%@,endTime=%@",StartDate,EndDate);
      NSInteger inv=[EndDate timeIntervalSinceDate:StartDate];
     if(inv<0){
         return NO;
