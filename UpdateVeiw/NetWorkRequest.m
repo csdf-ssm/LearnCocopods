@@ -107,7 +107,7 @@ static NetWorkRequest *instace = nil;
             [mutString appendFormat:@"%@=%@&",afterSortKeyArray[i],valueArray[i]];
         }
         [mutString deleteCharactersInRange:NSMakeRange(mutString.length-1, 1)];
-        NSString *upstring = [Tools stringToMD5:mutString].uppercaseString;
+        NSString *upstring = mutString.uppercaseString;
         NSString *lastString = [upstring substringFromIndex:(upstring.length-16)];
         return lastString;
     }
@@ -337,7 +337,7 @@ static NetWorkRequest *instace = nil;
     [self setRequestHeader];
 //    [KVNProgress show];
 
-    NSString* URLString = [NSString stringWithFormat:@"%@%@",kBaseUrl,[Tools stringWithUrl:kSafeUploadList anduser:nil]];
+    NSString* URLString = [NSString stringWithFormat:@"%@%@",kBaseUrl,kSafeUploadList];
 //    if ([SingleData sharedInstall].token == nil) {
 //        [paramDic setObject:safeString([[NSUserDefaults standardUserDefaults] objectForKey:@"token"]) forKey:@"token"];
 //    }
