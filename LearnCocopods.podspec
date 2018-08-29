@@ -26,12 +26,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/csdf-ssm/LearnCocopods.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/csdf-ssm/LearnCocopods.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = 'UpdateVeiw/**/*.{h,m}'
+  s.source_files  = 'UpdateVeiw/*.{h,m}'
   # s.exclude_files = "Classes/Exclude"
 
   s.public_header_files = 'UpdateVeiw/*.h'
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "Foundation", "UIKit"
+  s.frameworks = "Foundation", "UIKit","AssetsLibrary","AVFoundation","Photos"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
