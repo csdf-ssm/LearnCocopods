@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "LearnCocopods"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "LearnCocopods is myselfcocopods you can use this lianlianshou"
 
   # This description is used to generate tags and improve search results.

@@ -180,17 +180,9 @@ static NetWorkRequest *instace = nil;
 
 -(void)POST:(NSString *)URLString delegate:(id)delegate parameters:(NSMutableDictionary *)parameters success:(Success)success failure:(Failure)failure{
 //    [self setRequestHeader];
-//    [KVNProgress show];
+//    [KVNProgress show];    
 
-    NSString *time = [Tools getNowTimeTimestamp];
-    NSString *sign = [NSString stringWithFormat:@"sfci50a7s4dwi14313%@",time];
-    
-    [_manager.requestSerializer setValue:@"sfci50a7s4dwi" forHTTPHeaderField:@"App-Key"];
-    [_manager.requestSerializer setValue:@"14313" forHTTPHeaderField:@"Nonce"];
-    [_manager.requestSerializer setValue:time forHTTPHeaderField:@"Timestamp"];
-    [_manager.requestSerializer setValue:[Tools stringtoSHA1:sign] forHTTPHeaderField:@"Signature"];
-
-    URLString = [NSString stringWithFormat:@"http://api.cn.ronghub.com%@",URLString];
+    URLString = [NSString stringWithFormat:@"%@%@"kBaseUrl,URLString];
     
     
     
